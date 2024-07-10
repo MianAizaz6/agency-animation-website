@@ -13,8 +13,8 @@ const Video = () => {
         gsap.to(videoRef.current, {
             scrollTrigger: {
                 trigger: videoRef.current,
-                start: "550px top",
-                end: () => "+=800px",
+                start: "650px top",
+                end: "center",
                 scrub: 1,
                 pin: true,
                 pinSpacing: false,
@@ -26,7 +26,7 @@ const Video = () => {
             scrollTrigger: {
                 trigger: imageRef.current,
                 start: "450px top",
-                end: () => "+=800px",
+                end: "center",
                 scrub: 1,
                 pinSpacing: false,
             },

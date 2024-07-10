@@ -2,9 +2,15 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
-import { Accordion, AccordionItem, AccordionItemButton, AccordionItemHeading, AccordionItemPanel } from "react-accessible-accordion"
+import {
+    Accordion,
+    AccordionItem,
+    AccordionItemButton,
+    AccordionItemHeading,
+    AccordionItemPanel,
+} from "react-accessible-accordion";
 import { faqs } from "../../static-data";
-import PlusIcon from '../assets/svgs/plusIcon'
+import PlusIcon from "../assets/svgs/plusIcon";
 
 const FAQ = () => {
     const accordiansContainer = useRef();
@@ -36,7 +42,7 @@ const FAQ = () => {
     );
 
     return (
-        <div style={{ backgroundColor: '#181b21' }}>
+        <div style={{ backgroundColor: "#181b21" }}>
             <div className="faq container-fluid ">
                 <div className="container">
                     <div className="display-1 text-center text-[#ffff] my-5">
@@ -44,10 +50,16 @@ const FAQ = () => {
                     </div>
 
                     <div className="faq-section" ref={accordiansContainer}>
-
-                        <Accordion className="mx-auto w-[90%]" allowZeroExpanded defaultActiveKey="0">
+                        <Accordion
+                            className="mx-auto w-[90%]"
+                            allowZeroExpanded
+                            defaultActiveKey="0"
+                        >
                             {faqs.map((item) => (
-                                <AccordionItem className="mb-4" key={item.heading}>
+                                <AccordionItem
+                                    className="mb-4 items"
+                                    key={item.heading}
+                                >
                                     <AccordionItemHeading className="py-[25px] border-[1px] custom-gradient-bg border-white  px-3">
                                         <AccordionItemButton className="flex justify-between">
                                             <h4 className="text-[#ffff] text-[16px] font-bold leading-[28px]">
