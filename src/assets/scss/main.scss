@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    min-height: 100%;
+    height: auto
+}
+
+.spacer {
+    height: 50vh;
+    background-color: white
+}
+
+.custom-gradient-bg {
+    @apply bg-cover bg-center;
+    background-image: linear-gradient(rgba(31, 31, 39, .79), rgba(45, 45, 54, .79));
+}
+
+@import "./components/_header";
+@import "./components/_hero";
+@import "./components/_textsection";
+@import "./components/_cards";
+@import "./components/video";
+@import "./components/faq";
+@import "./components/footer";
+
+// @import '~bootstrap/scss/bootstrap.scss';

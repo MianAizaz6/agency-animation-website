@@ -1,0 +1,32 @@
+.footer {
+    background-color: rgb(19, 19, 19);
+    
+
+    padding: 5rem 0;
+
+    
+    
+    ul {
+        list-style: none;
+        
+        text-align: center;
+        
+        li.title {
+            font-size: 1.7rem;
+            color: white;
+            
+            margin: 20px 0;
+        }
+        li.item {
+            font: .8rem;
+            color: rgb(155, 155, 155);
+
+            transition: all 500ms ease-in;
+            cursor: pointer;
+
+            &:hover {
+                color: white;
+            }
+        }
+    }
+}

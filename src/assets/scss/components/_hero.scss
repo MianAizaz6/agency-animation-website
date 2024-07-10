@@ -1,0 +1,21 @@
+.hero-section {
+   width: 100%;
+   height: 80vh;
+
+   background-image: url(https://cdn-imgs.dora.run/design/Jmr5Ic9jeXFKK9AYDON1qj.jpeg/w/4096/h/4096/format/webp?);
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: 100% 100%;
+
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+
+   .content {
+        color: #e3e1de;
+        font-size: 80px;
+        font-weight: bold;
+
+        margin: 30px 0;
+   }
+}
