@@ -2,8 +2,8 @@
     background-color: #181b21;
     // padding-top: 1rem;
 
-    .cards {
-        min-width: 100%;
+    .container {
+        margin-inline: auto !important;
 
         .text-section {
             padding: 150px;
@@ -33,7 +33,7 @@
 
     .cards {
         margin: 5rem 0;
-        
+        padding: 0;
 
         .row-wrapper {
             height: 100vh;
@@ -50,11 +50,8 @@
                 width: 50%;
                 height: 100%;
 
-                padding: 10rem;
-                
                 @media (max-width: 1024px) {
                     width: 100%;
-                    padding: 5rem;
                 }
 
                 &-0 {
