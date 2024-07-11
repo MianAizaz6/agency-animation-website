@@ -3,6 +3,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useRef } from "react";
 import SplitType from "split-type";
+import bgvideo from '../assets/videos/bgvideo.mp4';
+
 
 const TextSection = () => {
     const text = useRef();
@@ -27,15 +29,17 @@ const TextSection = () => {
     return (
         <div className="container-fluid text-section">
             <video
-                src="//cdn-design-e.dora.run/Hg/mW/WB/HgmWWBILhxQI0jpznaXgXz.mp4"
                 autoPlay
+                muted
                 loop
                 style={{
                     width: "100%",
                     height: "100%",
                     objectFit: "cover",
                 }}
-            ></video>
+            >
+                <source src={bgvideo} type="video/mp4" />
+            </video>
             <div className="container d-flex justify-content-center align-items-center">
                 <p ref={text} className="display-1">
                     A dramatically more powerful camera system. A display so

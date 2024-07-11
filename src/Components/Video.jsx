@@ -2,7 +2,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap/all";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
-import ReactPlayer from "react-player/lazy";
+import iphoneVideo from '../assets/videos/Iphone_Video.mp4';
 
 const Video = () => {
     const videoRef = useRef();
@@ -13,7 +13,7 @@ const Video = () => {
         gsap.to(videoRef.current, {
             scrollTrigger: {
                 trigger: videoRef.current,
-                start: "650px top",
+                start: "350px top",
                 end: "center",
                 scrub: 1,
                 pin: true,
@@ -25,7 +25,7 @@ const Video = () => {
         gsap.to(imageRef.current, {
             scrollTrigger: {
                 trigger: imageRef.current,
-                start: "450px top",
+                start: "350px top",
                 end: "center",
                 scrub: 1,
                 pinSpacing: false,
@@ -42,13 +42,17 @@ const Video = () => {
                         src="https://cdn-imgs.dora.run/design/JEocbgdTccFFh4Bo5VAwn5.png/w/4096/h/4096/format/webp?"
                         alt=""
                     />
-                    <ReactPlayer
-                        playing
+                    <video
+                        autoPlay
+                        muted
                         loop
-                        height="100%"
-                        width={"100%"}
-                        url="//cdn-design-e.dora.run/I2/PG/nl/I2PGnlN47X0IbGLcG7qOCT.mp4"
-                    />
+                        style={{
+                            width: "100%",
+                            height: "100%",
+                        }}
+                    >
+                        <source src={iphoneVideo} type="video/mp4" />
+                    </video>
                 </div>
             </div>
         </>
