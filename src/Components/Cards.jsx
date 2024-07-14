@@ -1,23 +1,28 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { BrandedMarketing, ContentCreation, Ecommerce, LeadGeneration, Photographers, WebDesign } from "../../static-img-urls";
 
 /* eslint-disable react/prop-types */
 const Card = ({ data }) => {
     return (
-        <div className="simple-card">
-            <div className="card-header">
-                <img
-                    src="https://www.cobratate.com/jointherealworld/images/image-87-1.webp"
-                    alt=""
-                />
+        <div className="simple-card-wrapper h-[90vh]">
+            <div className="simple-card h-full gap-[30px]">
+                <div className="bg-gradient-to-r from-[#00FFFF] to-[#40FFC0] w-[120px] h-[120px] flex justify-center items-center mx-auto rounded-full p-[5px] overflow-hidden">
+                    <div className=" bg-black rounded-full p-[5px]">
+                        <img
+                            src={data.logo}
+                            alt=""
+                        />
+                    </div>
+                </div>
                 <div className="title">{data.title}</div>
-            </div>
-            <div className="subtitle">{data.subtitle}</div>
-            <img
-                src="https://www.cobratate.com/jointherealworld/images/crypto.jpg"
-                alt=""
-            />
+                <div className="subtitle">{data.subtitle}</div>
+                {/* <img
+                    src="https://www.cobratate.com/jointherealworld/images/crypto.jpg"
+                    alt=""
+                /> */}
+            </div> 
         </div>
     );
 };
@@ -44,32 +49,38 @@ const Cards = () => {
     const cardData = [
         [
             {
-                title: "E-Commerce",
-                subtitle: "Sell profitable products online. Industry experts will train you to find winning products, create the perfect store, and generate traffic on your sites.",
+                logo: LeadGeneration,
+                title: "Lead Generation via Paid Ads",
+                subtitle: "Boost your customer acquisition with targeted paid ad campaigns. Our expert team leverages data-driven strategies to ensure your ads reach the right audience, driving high-quality leads and maximizing your ROI.",
             },
             {
-                title: "Copywriting",
-                subtitle: "Master the art of selling with words. We’ll give you an easy to follow guide on how to master the art of copywriting and secure a list of high-paying clients.",
-            },
-        ],
-        [
-            {
-                title: "Stocks",
-                subtitle: "Multiply your capital through the stock market. We’ll train you to use technical analysis to find situations where there’s a higher upside than the downside.",
-            },
-            {
-                title: "Freelancing",
-                subtitle: "You’ll learn how to get paid a premium price to complete simple tasks, And the most effective methods to build a list of loyal clients",
+                logo: ContentCreation,
+                title: "Organic Content Creation",
+                subtitle: "Enhance your brand's online presence with engaging and authentic content. Our content creation team produces SEO-optimized blogs, social media posts, and multimedia content that resonates with your audience and improves organic search rankings.",
             },
         ],
         [
             {
-                title: "Crypto Investing",
-                subtitle: "Profit from the world’s highest-performing assets. We’ll focus on attacking crypto markets from 3 angles: Long-term, medium-term, and short-term.",
+                logo: BrandedMarketing,
+                title: "Branded Marketing Approaches",
+                subtitle: "Strengthen your brand identity with our customized marketing strategies. We develop and implement cohesive branding campaigns that convey your unique value proposition and foster customer loyalty.",
             },
             {
-                title: "Business & Finance",
-                subtitle: "Master the fundamental skills of business. We’ll teach you every skill the hyper successful entrepreneur of tomorrow needs to master.",
+                logo: Photographers,
+                title: "Professional Photographers",
+                subtitle: "Capture your brand's essence with high-quality visuals. Our professional photographers provide stunning images that elevate your brand's aesthetic and enhance your marketing materials, making a lasting impression on your audience.",
+            },
+        ],
+        [
+            {
+                logo: WebDesign,
+                title: "Premium Website Designs",
+                subtitle: "Transform your online presence with a sleek, user-friendly website. Our web design experts create responsive and visually appealing websites that reflect your brand's identity and offer an optimal user experience to convert visitors into customers.",
+            },
+            {
+                logo: Ecommerce,
+                title: "E-commerce Setup & Solutions",
+                subtitle: "Launch and optimize your online store with our comprehensive e-commerce solutions. We offer end-to-end services, including platform selection, setup, and integration, ensuring a seamless shopping experience that drives sales and customer satisfaction.",
             },
         ],
     ];
@@ -77,8 +88,10 @@ const Cards = () => {
         <section className="section">
             <div className="container p-0 cards">
                 <div className="text-section">
-                    <h1 className="main-heading">WHAT YOU WILL LEARN</h1>
-                    <p className="text-content">When a new technology revolutionises an industry, THE REAL WORLD will be the first and only place to teach you how to profit from it.</p>
+                    <h1 className="main-heading">Tailored Digital Strategies</h1>
+                    <p className="text-content">Transforming Your Digital Presence with Expert Solutions</p>
+                    {/* <h1 className="main-heading">UNIQUE SOLUTIONS</h1>
+                    <p className="text-content">Developing a Strong Client Base</p> */}
                 </div>
                 {cardData.map((pair, i) => (
                     <div key={i} className={`row-wrapper`}>

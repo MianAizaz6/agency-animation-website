@@ -4,7 +4,8 @@ import TextSection from "./Components/TextSection";
 import Cards from "./Components/Cards";
 import FAQ from "./Components/FAQ";
 import Footer from "./Components/Footer";
-import Video from "./Components/Video";
+// import Video from "./Components/Video";
+import Reviews from "./Components/Reviews";
 
 function App() {
     return (
@@ -13,7 +14,8 @@ function App() {
             <Hero />
             <TextSection />
             <Cards />
-            <Video />
+            {/* <Video /> */}
+            <Reviews />
             <FAQ />
             <Footer />
         </>

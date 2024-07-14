@@ -42,14 +42,15 @@ const FAQ = () => {
     );
 
     return (
-        <div style={{ backgroundColor: "#181b21" }}>
+        <div className="section">
             <div className="faq container-fluid ">
                 <div className="container">
-                    <div className="display-1 text-center text-[#ffff] my-5">
-                        Frequently Asked Questions
+                    <div className="flex flex-col items-center gap-[6px]">
+                        <h2 className="main-heading"> Frequently Asked Questions</h2>
+                        <p className="text-white text-[24px]">Find Answers to Common Inquiries</p>
                     </div>
 
-                    <div className="faq-section" ref={accordiansContainer}>
+                    <div className="faq-section mt-[30px]" ref={accordiansContainer}>
                         <Accordion
                             className="mx-auto w-[90%]"
                             allowZeroExpanded
@@ -60,15 +61,17 @@ const FAQ = () => {
                                     className="mb-4 items"
                                     key={item.heading}
                                 >
-                                    <AccordionItemHeading className="py-[25px] border-[1px] custom-gradient-bg border-white  px-3">
-                                        <AccordionItemButton className="flex justify-between">
-                                            <h4 className="text-[#ffff] text-[16px] font-bold leading-[28px]">
-                                                {item.heading}
-                                            </h4>
-                                            <PlusIcon />
-                                        </AccordionItemButton>
-                                    </AccordionItemHeading>
-                                    <AccordionItemPanel className="pt-[25px] text-[16px] border-[1px] p-4 border-[#ffff] leading-[24px] text-[#ffff]">
+                                    <div className="!bg-[rgba(255,255,255,0.2)] rounded-[10px]">
+                                        <AccordionItemHeading className="py-[25px] border-[1px] rounded-[10px]  px-3">
+                                            <AccordionItemButton className="flex justify-between">
+                                                <h4 className="text-[#ffff] m-0 text-[16px] font-bold leading-[28px]">
+                                                    {item.heading}
+                                                </h4>
+                                                <PlusIcon />
+                                            </AccordionItemButton>
+                                        </AccordionItemHeading>
+                                    </div>
+                                    <AccordionItemPanel className="pt-[25px] text-[16px] m-[10px] p-4 border-[#ffff] leading-[24px] text-[#ffff]">
                                         {item.content}
                                     </AccordionItemPanel>
                                 </AccordionItem>

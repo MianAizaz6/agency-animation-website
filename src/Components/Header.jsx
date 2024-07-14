@@ -1,15 +1,18 @@
+import logo from '../assets/svgs/white_logo.png'
+
 export const Header = () => {
     return (
         <div className="header container-fluid">
             <div className="container navbar-wrapper">
-                <div className="title">iPhone 13 Pro</div>
+                <img className='logo' src={logo} alt="logo"  />
                 <div className="menu">
                     <ul className="items">
-                        <li className="item">Overview</li>
-                        <li className="item">Switching to iPhone</li>
-                        <li className="item">Tech Specs</li>
+                        <li className="item">Home</li>
+                        <li className="item">Services</li>
+                        <li className="item">Our Projects</li>
+                        <li className="item">About Us</li>
                     </ul>
-                    <button>Buy</button>
+                    <button>Contact Us</button>
                 </div>
             </div>
         </div>

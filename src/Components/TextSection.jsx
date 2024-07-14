@@ -40,12 +40,13 @@ const TextSection = () => {
             >
                 <source src={bgvideo} type="video/mp4" />
             </video>
-            <div className="container d-flex justify-content-center align-items-center">
+            <div className="container d-flex align-items-center">
                 <p ref={text} className="display-1">
-                    A dramatically more powerful camera system. A display so
-                    responsive, every interaction feels new again. The world’s
-                    fastest smartphone chip. Exceptional durability. And a huge
-                    leap in battery life.
+                    O1W FOR DIGITAL MARKETING IS A FORWARD-THINKING AGENCY
+                    DEDICATED TO ELEVATING BUSINESSES THROUGH TARGETED
+                    DIGITAL STRATEGIES. OUR AGILE TEAM SPECIALIZES IN DRIVING
+                    QUALITY TRAFFIC AND ENHANCING BRAND VISIBILITY WITH
+                    INNOVATIVE AND CUSTOMIZED SOLUTIONS.
                 </p>
             </div>
         </div>

@@ -24,12 +24,23 @@ body {
 
 .spacer {
     height: 50vh;
-    background-color: white
-}
+ }
 
 .custom-gradient-bg {
     @apply bg-cover bg-center;
     background-image: linear-gradient(rgba(31, 31, 39, .79), rgba(45, 45, 54, .79));
+}
+
+.main-heading{
+    font-size: 40px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold; 
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(#00FFFF, #40FFC0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 @import "./components/_header";

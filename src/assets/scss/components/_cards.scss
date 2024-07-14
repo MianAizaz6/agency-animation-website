@@ -1,6 +1,8 @@
 .section {
-    background-color: #181b21;
+    // background-color: #181b21;
+    background: linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%);
     // padding-top: 1rem;
+    padding-bottom: 60px;
 
     .container {
         margin-inline: auto !important;
@@ -9,18 +11,25 @@
             padding: 150px;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            // gap: 20px;
             height: 200px;
 
             .main-heading {
-                font-size: 2.5rem;
-                color: #ffff;
-                height: fit-content;
+                font-size: 40px;
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                font-weight: bold; 
+                text-transform: uppercase;
+                background: -webkit-linear-gradient(#00FFFF, #40FFC0);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+
             }
 
             .text-content {
                 margin-bottom: 0;
-                font-size: 1.25rem;
+                font-size: 36px;
                 font-weight: 500;
                 line-height: 1.2;
                 text-align: center;
@@ -53,18 +62,31 @@
                 @media (max-width: 1024px) {
                     width: 100%;
                 }
-
-                &-0 {
-                    // background-color: rgb(51, 50, 50);
-                    background-color: #181b21;
+                &:nth-child(even){
+                    background: linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%);
+                    border-top-right-radius: 40px;
+                    border-bottom-right-radius: 40px;
                 }
-
-                &-1 {
-                    // background-color: rgb(162, 160, 160);
-                    background-color: #181b21;
+                &:nth-child(odd){
+                    background: linear-gradient(-109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%);
+                    border-top-left-radius: 40px;
+                    border-bottom-left-radius: 40px;
                 }
+                // &-0 {
+                //     // background-color: rgb(51, 50, 50);
+                //     // background-color: #181b21;
+                //     background: linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%);
+                //     border-top-right-radius: 40px;
+                //     border-bottom-right-radius: 40px;
+                // }
 
-                // padding: 16rem;
+                // &-1 {
+                //     // background-color: rgb(162, 160, 160);
+                //     // background-color: #181b21;
+                //     background: linear-gradient(-109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%);
+                //     border-top-left-radius: 40px;
+                //     border-bottom-left-radius: 40px;
+                // }
 
                 display: flex;
                 justify-content: center;
@@ -74,29 +96,33 @@
             }
         }
 
-
-        .simple-card {
-            // border: 2px solid black;
+        .simple-card-wrapper{
+            position: relative;
+            background: linear-gradient(to right, #00FFFF, #40FFC0);
+            padding: 3px;
+            max-width: calc(85% - 3px);
             border-radius: 30px;
+            overflow: hidden;
+            
+            .simple-card {
+                border-radius: 30px;
+                padding: 2rem;
+                border: 2px solid;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                opacity: 1;
+                transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                transform-style: preserve-3d;
+                border-color: rgba(0, 0, 0, 0);
+                background-color: rgb(0, 0, 0);
+                
+                transition: all 200ms ease-in;
+                color: white;
 
-            padding: 2rem;
-
-            width: 85%;
-            border: 2px solid;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            opacity: 1;
-            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-            transform-style: preserve-3d;
-            border-color: rgba(0, 0, 0, 0);
-            background-color: rgb(39, 41, 46);
-            transition: all 200ms ease-in;
-            color: white;
-
-            &:hover {
-                border: 2px solid #ffff;
-            }
+            // &:hover {
+            //     border: 2px solid #ffff;
+            // }
 
             .card-header {
                 display: flex;
@@ -108,14 +134,22 @@
                     margin: 0 30px;
                 }
 
-                .title {
-                    font-size: 2.3rem;
-                    line-height: 2.5rem;
-                }
+             
+            }
+            .title {
+                font-size: 40px;
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                font-weight: bold; 
+                text-transform: uppercase;
+                background: -webkit-linear-gradient(#00FFFF, #40FFC0);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
 
             .subtitle {
-                margin: 3rem 0;
+                // margin: 3rem 0;
 
                 font-size: 1.5rem;
                 text-align: center;
@@ -125,5 +159,6 @@
                 border-radius: 30px;
             }
         }
+    }
     }
 }
