@@ -3,27 +3,35 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useRef } from "react";
 import SplitType from "split-type";
-import bgvideo from '../assets/videos/bgvideo.mp4';
-
+import bgvideo from "../assets/videos/bgvideo.mp4";
 
 const TextSection = () => {
     const text = useRef();
     useGSAP(() => {
-        const char = new SplitType.create(text.current, "words");
+        const char = new SplitType.create(text.current, { split: "lines" });
 
         gsap.registerPlugin(ScrollTrigger);
 
-        gsap.from(char.words, {
-            scrollTrigger: {
-                trigger: char.words,
-                start: "top 70%",
-                end: "bottom 20%",
-                scrub: 2,
-            },
-            opacity: 0.2,
-            duration: 2,
-            stagger: 0.2,
-        });
+        console.log(char.lines);
+
+        for (let i = 0; i < char.lines.length; i++) {
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: char.lines[i],
+                    start: "top 50%",
+                    end: "bottom 40%",
+                    scrub: 2,
+                },
+            })
+                .to(char.lines[i], {
+                    color: "white",
+                    scale: 1.1,
+                })
+                .to(char.lines[i], {
+                    color: "rgba(255, 255, 255, 0.271)",
+                    scale: 1,
+                });
+        }
     }, []);
 
     return (
@@ -42,11 +50,10 @@ const TextSection = () => {
             </video>
             <div className="container d-flex align-items-center">
                 <p ref={text} className="display-1">
-                    O1W FOR DIGITAL MARKETING IS A FORWARD-THINKING AGENCY
-                    DEDICATED TO ELEVATING BUSINESSES THROUGH TARGETED
-                    DIGITAL STRATEGIES. OUR AGILE TEAM SPECIALIZES IN DRIVING
-                    QUALITY TRAFFIC AND ENHANCING BRAND VISIBILITY WITH
-                    INNOVATIVE AND CUSTOMIZED SOLUTIONS.
+                    A dramatically more powerful camera system. A display so
+                    responsive, every interaction feels new again. The world’s
+                    fastest smartphone chip. Exceptional durability. And a huge
+                    leap in battery life.
                 </p>
             </div>
         </div>
