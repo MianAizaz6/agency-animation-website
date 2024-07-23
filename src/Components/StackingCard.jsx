@@ -15,8 +15,8 @@ const StackingCard = () => {
             gsap.to(panels[index], {
                 scrollTrigger: {
                     trigger: panels[index],
-                    start: "top 300px",
-                    end: "bottom 300px",
+                    start: "top 80px",
+                    end: "bottom 80px",
                     endTrigger: panels[panels.length - 1],
                     scrub: true,
                     pin: true,

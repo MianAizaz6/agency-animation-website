@@ -8,6 +8,7 @@ import {
     Photographers,
     WebDesign,
 } from "../../static-img-urls";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 /* eslint-disable react/prop-types */
 const Card = ({ data }) => {
@@ -34,6 +35,8 @@ const Cards = () => {
     useGSAP(() => {
         let panels = gsap.utils.toArray(".row-wrapper");
 
+        gsap.registerPlugin(ScrollTrigger);
+
         panels.forEach((panel) => {
             gsap.timeline({
                 scrollTrigger: {
@@ -47,9 +50,48 @@ const Cards = () => {
                     pin: true,
                     pinSpacing: false,
                 },
-            }).to(panel, {
-                x: 100,
-                scale: 0.8,
+            });
+
+            const t1 = gsap.fromTo(
+                panel.children[0],
+                {
+                    x: -50,
+                    opacity: 0,
+                },
+                {
+                    x: 0,
+                    opacity: 1,
+                }
+            );
+            const t2 = gsap.fromTo(
+                panel.children[1],
+                {
+                    x: 50,
+                    opacity: 0,
+                },
+                {
+                    x: 0,
+                    opacity: 1,
+                }
+            );
+
+            ScrollTrigger.create({
+                trigger: panel,
+                start: "top 70%",
+                end: "bottom top",
+
+                toggleActions: "restart pause reverse none",
+
+                animation: t1,
+            });
+            ScrollTrigger.create({
+                trigger: panel,
+                start: "top 70%",
+                end: "bottom top",
+
+                toggleActions: "restart pause reverse none",
+
+                animation: t2,
             });
         });
     }, []);

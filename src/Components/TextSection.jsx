@@ -12,20 +12,18 @@ const TextSection = () => {
 
         gsap.registerPlugin(ScrollTrigger);
 
-        console.log(char.lines);
-
         for (let i = 0; i < char.lines.length; i++) {
             gsap.timeline({
                 scrollTrigger: {
                     trigger: char.lines[i],
                     start: "top 50%",
                     end: "bottom 40%",
-                    scrub: 2,
+                    scrub: 1,
                 },
             })
                 .to(char.lines[i], {
                     color: "white",
-                    scale: 1.1,
+                    scale: 1.005,
                 })
                 .to(char.lines[i], {
                     color: "rgba(255, 255, 255, 0.271)",
