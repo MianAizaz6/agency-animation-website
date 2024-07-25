@@ -1,0 +1,27 @@
+.carousel-section {
+
+    background-image: url("/src/assets/svgs/hero_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+        
+    .item-slide {
+        display: flex;
+        justify-content: center;
+    
+        padding: 10rem 0;
+    
+        img {
+            width: 300px;
+
+            margin: 0 1rem;
+        }
+
+        .title {
+            font-size: 4rem;
+            font-weight: bold;
+            color: white;
+
+            max-width: 60%;
+        }
+    }
+}

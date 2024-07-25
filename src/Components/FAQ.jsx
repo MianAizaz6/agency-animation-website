@@ -42,15 +42,20 @@ const FAQ = () => {
     );
 
     return (
-        <div className="section">
+        <div className="faq-section">
             <div className="faq container-fluid ">
                 <div className="container">
                     <div className="flex flex-col items-center gap-[6px]">
-                        <h2 className="main-heading"> Frequently Asked Questions</h2>
-                        <p className="text-white text-[24px]">Find Answers to Common Inquiries</p>
+                        <h2 className="main-heading">
+                            {" "}
+                            Frequently Asked Questions
+                        </h2>
+                        <p className="text-white text-[24px]">
+                            Find Answers to Common Inquiries
+                        </p>
                     </div>
 
-                    <div className="faq-section mt-[30px]" ref={accordiansContainer}>
+                    <div className=" mt-[30px]" ref={accordiansContainer}>
                         <Accordion
                             className="mx-auto w-[90%]"
                             allowZeroExpanded

@@ -43,6 +43,11 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
+a {
+    text-decoration: none !important;
+    color: white !important;
+}
+
 @import "./components/_header";
 @import "./components/_hero";
 @import "./components/_textsection";
@@ -51,5 +56,8 @@ body {
 @import "./components/faq";
 @import "./components/stackingcards";
 @import "./components/footer";
+@import "./components/carousel";
+@import "./components/services";
+@import "./components/getstarted";
 
 // @import '~bootstrap/scss/bootstrap.scss';
