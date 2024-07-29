@@ -2,6 +2,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useRef } from "react";
+import { createContent, launchCampaign, marketingChannels, marketingGoals, monitorResults, refineStrategy, targetAudience } from "../../static-img-urls";
 
 const StackingCard = () => {
     const stackedCardsRef = useRef();
@@ -24,7 +25,7 @@ const StackingCard = () => {
                 },
                 scale: 0.8,
                 y: 20 * index,
-                x: -20 * index,
+                x: 15 * index,
             });
         }
     }, {});
@@ -33,28 +34,58 @@ const StackingCard = () => {
         <div className="stacking-card">
             <div className="title">{title}</div>
             <div className="subtitle">{subtitle}</div>
-            <img src={img} alt="" />
+            <img className="object-contain" src={img} alt="" />
         </div>
     );
 
     return (
-        <div className="stacking-container container-fluid hero-bg">
-            <div className="container">
+        <div className="stacking-container container-fluid hero-bg overflow-hidden">
+            <div className="container pt-[150px] pb-[820px]">
+                <div className="flex flex-col items-center">
+                    <h1 className="main-heading">
+                        Your Path to Digital Success
+                    </h1>
+                    <p className="text-white text-[36px] leading-[1.2] font-medium">
+                        Our Strategic Blueprint for Managing Your Digital Marketing Efforts
+                    </p>
+                    {/* <h1 className="main-heading">UNIQUE SOLUTIONS</h1>
+                    <p className="text-content">Developing a Strong Client Base</p> */}
+                </div>
                 <div ref={stackedCardsRef} className="stacking-cards">
                     {stackingCardContent(
-                        "All the music and more 🤘",
-                        "110+ million tracks ad-free on all of your devices, Lossless and exclusive playlists.",
-                        "https://www.napster.com/us/wp-content/uploads/sites/5/2024/05/card-1-lg.png"
+                        "Define your target audience",
+                        "Identify your ideal customer and their needs and preferences. ",
+                        targetAudience
                     )}
                     {stackingCardContent(
-                        "All the music and more 🤘",
-                        "110+ million tracks ad-free on all of your devices, Lossless and exclusive playlists.",
-                        "https://www.napster.com/us/wp-content/uploads/sites/5/2024/05/card-1-lg.png"
+                        "Set your marketing goals",
+                        "Determine what you want to achieve with your campaigns.",
+                        marketingGoals
                     )}
                     {stackingCardContent(
-                        "All the music and more 🤘",
-                        "110+ million tracks ad-free on all of your devices, Lossless and exclusive playlists.",
-                        "https://www.napster.com/us/wp-content/uploads/sites/5/2024/05/card-1-lg.png"
+                        "Choose your marketing channels",
+                        " Select the channels that are most relevant to your audience and goals",
+                        marketingChannels
+                    )}
+                    {stackingCardContent(
+                        "Create your content",
+                        "Create engaging, informative, and relevant content to get the attention of your target audience",
+                        createContent
+                    )}
+                    {stackingCardContent(
+                        "Launch your campaign",
+                        "Plan and execute your campaign, including creating ads, publishing content, and managing social media.",
+                        launchCampaign
+                    )}
+                    {stackingCardContent(
+                        "Monitor and measure your results",
+                        "Track your campaign performance using analytics tools and adjust your strategy accordingly.",
+                        monitorResults
+                    )}
+                    {stackingCardContent(
+                        "Refine your strategy",
+                        "Continuously analyze your results and refine your strategy to improve your campaign’s effectiveness.",
+                        refineStrategy
                     )}
                 </div>
                 <div className="end-trigger"></div>

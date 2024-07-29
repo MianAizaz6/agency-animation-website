@@ -13,8 +13,8 @@ function App() {
             <TextSection />
             <Cards />
             {/* <Video /> */}
-            <Reviews />
             <StackingCard />
+            <Reviews />
             <FAQ />
         </>
     );

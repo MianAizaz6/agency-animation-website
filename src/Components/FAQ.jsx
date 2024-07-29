@@ -1,61 +1,57 @@
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useRef } from "react";
-import {
-    Accordion,
-    AccordionItem,
-    AccordionItemButton,
-    AccordionItemHeading,
-    AccordionItemPanel,
-} from "react-accessible-accordion";
-import { faqs } from "../../static-data";
+import  { useRef, useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Accordion, AccordionItem, AccordionItemHeading, AccordionItemButton, AccordionItemPanel } from 'react-accessible-accordion';
 import PlusIcon from "../assets/svgs/plusIcon";
+import { faqs } from '../../static-data';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const FAQ = () => {
-    const accordiansContainer = useRef();
+    const accordionsContainer = useRef();
 
-    gsap.registerPlugin(ScrollTrigger);
+    useEffect(() => {
+        const items = accordionsContainer.current.querySelectorAll('.items');
+        
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: accordionsContainer.current,
+                start: "top 70%",
+                once: true, // This ensures the animation only happens once
+            }
+        });
 
-    useGSAP(
-        () => {
-            gsap.from(".items", {
-                scrollTrigger: {
-                    trigger: ".items",
-                    start: "center center",
-                    end: "bottom top",
-
-                    toggleActions: "restart pause resume none",
-                },
-                y: 50,
-
-                opacity: 0,
-
-                duration: 0.1,
-                ease: "sine.in",
+        tl.fromTo(items, 
+            { y: 50, opacity: 0 },
+            { 
+                y: 0,
+                opacity: 1,
+                duration: 0.5,
+                ease: "sine.out",
                 stagger: {
-                    each: 0.6,
+                    each: 0.2,
                 },
-            });
-        },
-        { scope: accordiansContainer }
-    );
+            }
+        );
+
+        // Cleanup function
+        return () => {
+            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        };
+    }, []); // Empty dependency array ensures this runs only once on mount
 
     return (
         <div className="faq-section">
-            <div className="faq container-fluid ">
+            <div className="faq container-fluid">
                 <div className="container">
                     <div className="flex flex-col items-center gap-[6px]">
-                        <h2 className="main-heading">
-                            {" "}
-                            Frequently Asked Questions
-                        </h2>
+                        <h2 className="main-heading">Frequently Asked Questions</h2>
                         <p className="text-white text-[24px]">
                             Find Answers to Common Inquiries
                         </p>
                     </div>
 
-                    <div className=" mt-[30px]" ref={accordiansContainer}>
+                    <div className="mt-[30px]" ref={accordionsContainer}>
                         <Accordion
                             className="mx-auto w-[90%]"
                             allowZeroExpanded
@@ -67,7 +63,7 @@ const FAQ = () => {
                                     key={item.heading}
                                 >
                                     <div className="!bg-[rgba(255,255,255,0.2)] rounded-[10px]">
-                                        <AccordionItemHeading className="py-[25px] border-[1px] rounded-[10px]  px-3">
+                                        <AccordionItemHeading className="py-[25px] border-[1px] rounded-[10px] px-3">
                                             <AccordionItemButton className="flex justify-between">
                                                 <h4 className="text-[#ffff] m-0 text-[16px] font-bold leading-[28px]">
                                                     {item.heading}
@@ -82,33 +78,6 @@ const FAQ = () => {
                                 </AccordionItem>
                             ))}
                         </Accordion>
-
-                        {/* <Accordion defaultActiveKey="0">
-                            {[...Array(15)].map((item, index) => (
-                                <Accordion.Item
-                                    className="items"
-                                    key={item}
-                                    eventKey={index}
-                                >
-                                    <Accordion.Header>
-                                        Accordion Item #{index}
-                                    </Accordion.Header>
-                                    <Accordion.Body>
-                                        Lorem ipsum dolor sit amet, consectetur
-                                        adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua.
-                                        Ut enim ad minim veniam, quis nostrud
-                                        exercitation ullamco laboris nisi ut aliquip
-                                        ex ea commodo consequat. Duis aute irure
-                                        dolor in reprehenderit in voluptate velit
-                                        esse cillum dolore eu fugiat nulla pariatur.
-                                        Excepteur sint occaecat cupidatat non
-                                        proident, sunt in culpa qui officia deserunt
-                                        mollit anim id est laborum.
-                                    </Accordion.Body>
-                                </Accordion.Item>
-                            ))}
-                        </Accordion> */}
                     </div>
                 </div>
             </div>

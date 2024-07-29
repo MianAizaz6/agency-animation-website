@@ -1,57 +1,73 @@
+import { useRef, useEffect, useState } from 'react';
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
-import { useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
-import bgvideo from "../assets/videos/bgvideo.mp4";
+import { useInView } from 'react-intersection-observer';
+import glitch from "../assets/videos/glitch.mp4";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const TextSection = () => {
-    const text = useRef();
-    useGSAP(() => {
-        const char = new SplitType.create(text.current, { split: "lines" });
+    const textRef = useRef();
+    const videoRef = useRef(null);
+    const { ref, inView } = useInView({
+        threshold: 0.5,
+    });
+    const [isVideoPlayed, setIsVideoPlayed] = useState(false);
+    const [showContent, setShowContent] = useState(false);
 
-        gsap.registerPlugin(ScrollTrigger);
-
-        for (let i = 0; i < char.lines.length; i++) {
-            gsap.timeline({
-                scrollTrigger: {
-                    trigger: char.lines[i],
-                    start: "top 50%",
-                    end: "bottom 40%",
-                    scrub: 1,
-                },
-            })
-                .to(char.lines[i], {
-                    color: "white",
-                    scale: 1.005,
-                })
-                .to(char.lines[i], {
-                    color: "rgba(255, 255, 255, 0.271)",
-                    scale: 1,
-                });
+    useEffect(() => {
+        if (inView && !isVideoPlayed) {
+            videoRef.current.play();
+            setTimeout(() => {
+                setIsVideoPlayed(true);
+                videoRef.current.pause();
+                setShowContent(true);
+            }, 1000);
         }
-    }, []);
+    }, [inView, isVideoPlayed]);
+
+    useGSAP(() => {
+        if (showContent) {
+        
+            const splitText = new SplitType(textRef.current, { types: 'lines' });
+            console.log(splitText)
+            gsap.set(splitText.lines, { opacity: 0.2 }); // Set initial low opacity for all lines
+
+            splitText.lines.forEach((line, index) => {
+                gsap.timeline({
+                    scrollTrigger: {
+                        trigger: textRef.current,
+                        start: `top+=${index * 50} center`, // Adjust the 50 to change the scroll distance between line animations
+                        end: `top+=${(index + 1) * 50} center`,
+                        scrub: true,
+                        // markers: true, // Uncomment this line to see the trigger points for debugging
+                    }
+                })
+                .to(line, { opacity: 1, duration: 0.5 })
+                .to(line, { opacity: 0.2, duration: 0.5 }, "+=0.5");
+            });
+        }
+    }, [showContent]);
 
     return (
-        <div className="container-fluid text-section">
+        <div ref={ref} className={`container-fluid text-section ${isVideoPlayed ? 'bg-black' : ''}`}>
             <video
-                autoPlay
+                ref={videoRef}
                 muted
-                loop
+                playsInline
                 style={{
                     width: "100%",
                     height: "100%",
                     objectFit: "cover",
                 }}
             >
-                <source src={bgvideo} type="video/mp4" />
+                <source src={glitch} type="video/mp4" />
             </video>
-            <div className="container d-flex align-items-center">
-                <p ref={text} className="display-1">
-                    A dramatically more powerful camera system. A display so
-                    responsive, every interaction feels new again. The world’s
-                    fastest smartphone chip. Exceptional durability. And a huge
-                    leap in battery life.
+            <div className={`container d-flex align-items-center ${showContent ? 'visible grow-animate' : 'invisible'}`}>
+                <p ref={textRef} className="display-1">
+                    A game-changing digital approach. Compelling content that converts. Strategic targeting with pinpoint accuracy. In-depth analytics for smarter decisions. And an exceptional rise in your online presence.
                 </p>
             </div>
         </div>

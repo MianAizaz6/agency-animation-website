@@ -48,6 +48,19 @@ a {
     color: white !important;
 }
 
+.grow-animate{
+    animation: createBox 1s;
+}
+
+@keyframes createBox {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
 @import "./components/_header";
 @import "./components/_hero";
 @import "./components/_textsection";
@@ -59,6 +72,6 @@ a {
 @import "./components/carousel";
 @import "./components/services";
 @import "./components/getstarted";
-@import "./components/aboutus ";
+@import "./components/aboutus"
 
 // @import '~bootstrap/scss/bootstrap.scss';
