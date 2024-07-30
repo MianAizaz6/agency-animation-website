@@ -1,5 +1,5 @@
+import ProjectsHero from "../Components/ProjectHero";
 import { ProjectsSection } from "../Components/ProjectSection";
-import ServicesHero from "../Components/ServicesHero";
 
 export const Projects = () => {
     return (
@@ -7,7 +7,7 @@ export const Projects = () => {
             {/* <Hero /> */}
             <div className="services container-fluid p-0">
                 {/* <Carousel /> */}
-                <ServicesHero />
+                <ProjectsHero />
                 <ProjectsSection />
             </div>
         </div>

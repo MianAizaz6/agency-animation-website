@@ -6,6 +6,7 @@ import FAQ from "../Components/FAQ";
 import Reviews from "../Components/Reviews";
 import StackingCard from "../Components/StackingCard";
 
+
 function App() {
     return (
         <>

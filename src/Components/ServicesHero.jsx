@@ -6,10 +6,10 @@ export const ServicesHero = () => {
             <div className="container">
                 <div className="content">
                         <ReactTyped 
-                        strings={["Innovative Projects that Drive Results"]}
-                        typeSpeed={150}
+                        strings={["Strategic Solutions to Amplify <br> <strong> Your Online Presence  </strong>"]}
+                        typeSpeed={50}
                         backSpeed={40} 
-                        loop />
+                        />
                 </div>
             </div>
         </div>

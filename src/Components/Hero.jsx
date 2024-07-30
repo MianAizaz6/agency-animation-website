@@ -7,9 +7,9 @@ export const Hero = () => {
                 <div className="content">
                         <ReactTyped 
                         strings={["Plenty Options Many Lanes <br> <strong> Few Steps Only one way to </strong> <br> Your Success"]}
-                        typeSpeed={150}
+                        typeSpeed={50}
                         backSpeed={40} 
-                        loop />
+                         />
                 </div>
             </div>
         </div>

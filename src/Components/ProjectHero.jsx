@@ -1,12 +1,12 @@
 import { ReactTyped } from "react-typed";
 
-export const AboutHero = () => {
+export const ProjectsHero = () => {
     return (
         <div className="herobg">
             <div className="container">
                 <div className="content">
                         <ReactTyped 
-                        strings={["Meet Your Growth Partners<br> <strong>  Our Journey, Your Success  </strong>"]}
+                        strings={["Excellence in Action<br> <strong> Real Projects, Real Results </strong>"]}
                         typeSpeed={50}
                         backSpeed={40} 
                         />
@@ -16,5 +16,5 @@ export const AboutHero = () => {
     );
 };
 
-export default AboutHero;
+export default ProjectsHero;
 

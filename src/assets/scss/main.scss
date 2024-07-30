@@ -11,6 +11,51 @@
     font-family: "Lato", sans-serif;
 }
 
+.fade-away{
+    animation: fadeaway 1.5s ease-out 0s forwards;
+  }
+  
+.animate-left{
+  animation: anleft 3s ease-out 0s forwards;
+}
+
+.animate-right{
+  animation: anright 3s ease-out 0s forwards;
+}
+
+
+@keyframes fadeaway {
+    0% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+    }
+  }
+@keyframes anleft {
+    0% {
+      left: -150%;
+      opacity: 0;
+    }
+  
+    100% {
+      left: 0;
+      opacity: 1;
+    }
+  }
+@keyframes anright {
+    0% {
+      left: 150%;
+      opacity: 0;
+    }
+  
+    100% {
+      left: 0%;
+      opacity: 1;
+    }
+  }
+
 
 html {
     scroll-behavior: smooth;

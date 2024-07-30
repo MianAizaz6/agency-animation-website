@@ -135,48 +135,43 @@ export const cardData = [
 ];
 
 export const projectsData = [
-  [
+  
     {
       logo: SEO,
-      title: "Detailed SEO Audit of a Website",
-      subtitle:
-        "SEO, or search engine optimization, is a big part of digital marketing. Blogs and websites are the biggest sources of organic traffic and marketing. SEO allows digital marketers to optimize the website to make it more appealing and inviting for potential or existing customers. ",
+      title: "An Italian restaurant that serves unique western food mixed with Eastern touches.",
+      Name:"MARANELLO RESTAURANT & CAFE",
+      subtitle:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla temporibus accusamus perspiciatis quaerat omnis eum suscipit minima repellat aliquam repudiandae blanditiis dolore dignissimos saepe ducimus porro ipsum illum quasi, error illo! Vero, quisquam deleniti accusamus laborum soluta molestiae quaerat, ex repudiandae cumque, perspiciatis enim alias omnis?",
     },
     {
       logo: videoMarketing,
-      title: "Video Marketing",
-      subtitle:
-        "Enhance your brand's online presence with engaging and authentic content. Our content creation team produces SEO-optimized blogs, social media posts, and multimedia content that resonates with your audience and improves organic search rankings.",
+      title: "One of the most veteran Cleaning companies with over 43 Years in UAE’s market covering both B2B & B2C markets.",
+      Name:"NADA CLEANING CONTRACTING",
+      subtitle:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla temporibus accusamus perspiciatis quaerat omnis eum suscipit minima repellat aliquam repudiandae blanditiis dolore dignissimos saepe ducimus porro ipsum illum quasi, error illo! Vero, quisquam deleniti accusamus laborum soluta molestiae quaerat, ex repudiandae cumque, perspiciatis enim alias omnis?",
     },
-  ],
-  [
     {
       logo: Content,
-      title: "Content Marketing ",
-      subtitle:
-        "Strengthen your brand identity with our customized marketing strategies. We develop and implement cohesive branding campaigns that convey your unique value proposition and foster customer loyalty.",
+      title: "Is a designer retail distributor providing luxury clothes,shoes, and bags to the European market.",
+      Name:"BRANDS LAB BY ZIANI",
+      subtitle:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla temporibus accusamus perspiciatis quaerat omnis eum suscipit minima repellat aliquam repudiandae blanditiis dolore dignissimos saepe ducimus porro ipsum illum quasi, error illo! Vero, quisquam deleniti accusamus laborum soluta molestiae quaerat, ex repudiandae cumque, perspiciatis enim alias omnis?",
     },
     {
       logo: PPC,
-      title: "PPC Marketing Strategies",
-      subtitle:
-        "Capture your brand's essence with high-quality visuals. Our professional photographers provide stunning images that elevate your brand's aesthetic and enhance your marketing materials, making a lasting impression on your audience.",
+      title: "Is a Swedish based classified E commerce platform that specializes in trucks, tractors, and heavy units.",
+      Name:"TRUXTERS",
+      subtitle:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla temporibus accusamus perspiciatis quaerat omnis eum suscipit minima repellat aliquam repudiandae blanditiis dolore dignissimos saepe ducimus porro ipsum illum quasi, error illo! Vero, quisquam deleniti accusamus laborum soluta molestiae quaerat, ex repudiandae cumque, perspiciatis enim alias omnis?",
     },
-  ],
-  [
     {
       logo: googleAnalytics,
-      title: "Google Analytics",
-      subtitle:
-        "Transform your online presence with a sleek, user-friendly website. Our web design experts create responsive and visually appealing websites that reflect your brand's identity and offer an optimal user experience to convert visitors into customers.",
+      title: "Is a Jordanian - Palestinian restaurant serving the authentic taste of Jordanian & Palestinian cuisine.",
+      Name:"MR DAHBIRHA",
+      subtitle:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla temporibus accusamus perspiciatis quaerat omnis eum suscipit minima repellat aliquam repudiandae blanditiis dolore dignissimos saepe ducimus porro ipsum illum quasi, error illo! Vero, quisquam deleniti accusamus laborum soluta molestiae quaerat, ex repudiandae cumque, perspiciatis enim alias omnis?",
     },
     {
       logo: socailMedia,
-      title: "Social Media Ad Campaigns",
-      subtitle:
-        "Launch and optimize your online store with our comprehensive e-commerce solutions. We offer end-to-end services, including platform selection, setup, and integration, ensuring a seamless shopping experience that drives sales and customer satisfaction.",
+      title: "An Interior & full design solution brand that provides top notch modern designs and implementations.",
+      Name:"ELLIXI INTERIOR DESIGN",
+      subtitle:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla temporibus accusamus perspiciatis quaerat omnis eum suscipit minima repellat aliquam repudiandae blanditiis dolore dignissimos saepe ducimus porro ipsum illum quasi, error illo! Vero, quisquam deleniti accusamus laborum soluta molestiae quaerat, ex repudiandae cumque, perspiciatis enim alias omnis?",
     },
-  ],
 ];
 
 export const whyusdata = [

@@ -10,11 +10,13 @@ gsap.registerPlugin(ScrollTrigger);
 
 const TextSection = () => {
     const textRef = useRef();
+    const sectionRef = useRef();
     const videoRef = useRef(null);
     const { ref, inView } = useInView({
         threshold: 0.5,
     });
     const [isVideoPlayed, setIsVideoPlayed] = useState(false);
+    const [startedScrolling,setStartedScrolling] = useState(false);
     const [showContent, setShowContent] = useState(false);
 
     useEffect(() => {
@@ -22,15 +24,31 @@ const TextSection = () => {
             videoRef.current.play();
             setTimeout(() => {
                 setIsVideoPlayed(true);
-                videoRef.current.pause();
+                // videoRef.current.pause();
                 setShowContent(true);
             }, 1000);
         }
+
+        const handleScroll = () => {
+            const sectionHeight = sectionRef.current.offsetHeight;
+                    
+            if (window.scrollY >=  656 + (sectionHeight / 3))  {
+              setStartedScrolling(true);
+            }
+          };
+      
+          window.addEventListener('scroll', handleScroll);
+      
+          return () => {
+            window.removeEventListener('scroll', handleScroll);
+          };
+
     }, [inView, isVideoPlayed]);
+
 
     useGSAP(() => {
         if (showContent) {
-        
+
             const splitText = new SplitType(textRef.current, { types: 'lines' });
             console.log(splitText)
             gsap.set(splitText.lines, { opacity: 0.2 }); // Set initial low opacity for all lines
@@ -45,30 +63,36 @@ const TextSection = () => {
                         // markers: true, // Uncomment this line to see the trigger points for debugging
                     }
                 })
-                .to(line, { opacity: 1, duration: 0.5 })
-                .to(line, { opacity: 0.2, duration: 0.5 }, "+=0.5");
+                    .to(line, { opacity: 1, duration: 0.5 })
+                    .to(line, { opacity: 0.2, duration: 0.5 }, "+=0.5");
             });
         }
     }, [showContent]);
 
+
+
     return (
-        <div ref={ref} className={`container-fluid text-section ${isVideoPlayed ? 'bg-black' : ''}`}>
-            <video
-                ref={videoRef}
-                muted
-                playsInline
-                style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                }}
-            >
-                <source src={glitch} type="video/mp4" />
-            </video>
-            <div className={`container d-flex align-items-center ${showContent ? 'visible grow-animate' : 'invisible'}`}>
-                <p ref={textRef} className="display-1">
-                    A game-changing digital approach. Compelling content that converts. Strategic targeting with pinpoint accuracy. In-depth analytics for smarter decisions. And an exceptional rise in your online presence.
-                </p>
+        <div ref={ref} className={`container-fluid text-section  bg-black${isVideoPlayed ? '' : ''}`}>
+            <div className='relative w-full' ref={sectionRef}>
+                <video
+                    ref={videoRef}
+                    muted
+                    loop
+                    className={`${isVideoPlayed ? ' !z-20 ' : 'opacity-100'} ${startedScrolling ? 'fade-away' : ''}`}
+                    playsInline
+                    style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                    }}
+                >
+                    <source src={glitch} type="video/mp4" />
+                </video>
+                <div className={`container d-flex align-items-center relative !z-30 ${showContent ? 'visible grow-animate' : 'invisible'}`}>
+                    <p ref={textRef} className="display-1">
+                        A game-changing digital approach. Compelling content that converts. Strategic targeting with pinpoint accuracy. In-depth analytics for smarter decisions. And an exceptional rise in your online presence.
+                    </p>
+                </div>
             </div>
         </div>
     );
