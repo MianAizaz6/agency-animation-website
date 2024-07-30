@@ -39,8 +39,8 @@ const TextSection = () => {
                 gsap.timeline({
                     scrollTrigger: {
                         trigger: textRef.current,
-                        start: `top+=${index * 70} center`, // Adjust the 70 to change the scroll distance between line animations
-                        end: `top+=${(index + 1) * 70} center`,
+                        start: `top+=${index * 50} center`, // Adjust the 50 to change the scroll distance between line animations
+                        end: `top+=${(index + 1) * 50} center`,
                         scrub: true,
                         // markers: true, // Uncomment this line to see the trigger points for debugging
                     }

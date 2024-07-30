@@ -12,7 +12,6 @@ function App() {
             <Hero />
             <TextSection />
             <Cards />
-            {/* <Video /> */}
             <StackingCard />
             <Reviews />
             <FAQ />

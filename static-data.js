@@ -1,3 +1,5 @@
+import { BrandedMarketing, ContentCreation, Ecommerce, LeadGeneration, Photographers, WebDesign } from "./static-img-urls";
+
 export const faqs = [
   {
     heading: "Why is digital marketing important for my business?",
@@ -85,4 +87,64 @@ export const reviewsData = [
       desc:"An Interior & full design solution brand that provides top notch modern designs and implementations."
      }
   ] 
+]
+
+export const cardData = [
+  [
+      {
+          logo: LeadGeneration,
+          title: "Lead Generation via Paid Ads",
+          subtitle:
+              "Boost your customer acquisition with targeted paid ad campaigns. Our expert team leverages data-driven strategies to ensure your ads reach the right audience, driving high-quality leads and maximizing your ROI.",
+      },
+      {
+          logo: ContentCreation,
+          title: "Organic Content Creation",
+          subtitle:
+              "Enhance your brand's online presence with engaging and authentic content. Our content creation team produces SEO-optimized blogs, social media posts, and multimedia content that resonates with your audience and improves organic search rankings.",
+      },
+  ],
+  [
+      {
+          logo: BrandedMarketing,
+          title: "Branded Marketing Approaches",
+          subtitle:
+              "Strengthen your brand identity with our customized marketing strategies. We develop and implement cohesive branding campaigns that convey your unique value proposition and foster customer loyalty.",
+      },
+      {
+          logo: Photographers,
+          title: "Professional Photographers",
+          subtitle:
+              "Capture your brand's essence with high-quality visuals. Our professional photographers provide stunning images that elevate your brand's aesthetic and enhance your marketing materials, making a lasting impression on your audience.",
+      },
+  ],
+  [
+      {
+          logo: WebDesign,
+          title: "Premium Website Designs",
+          subtitle:
+              "Transform your online presence with a sleek, user-friendly website. Our web design experts create responsive and visually appealing websites that reflect your brand's identity and offer an optimal user experience to convert visitors into customers.",
+      },
+      {
+          logo: Ecommerce,
+          title: "E-commerce Setup & Solutions",
+          subtitle:
+              "Launch and optimize your online store with our comprehensive e-commerce solutions. We offer end-to-end services, including platform selection, setup, and integration, ensuring a seamless shopping experience that drives sales and customer satisfaction.",
+      },
+  ],
+];
+
+export const whyusdata = [
+  {
+    heading:"Proven Results",
+    subheading:"Don’t wait—experience immediate improvements in your digital presence."
+  },
+  {
+    heading:"Innovative Solutions",
+    subheading:"Be the first to benefit from our groundbreaking marketing techniques."
+  },
+  {
+    heading:"Rapid Implementation",
+    subheading:"Start seeing results right away with our fast-tracked strategies."
+  },
 ]

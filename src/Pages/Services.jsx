@@ -1,4 +1,4 @@
-import Carousel from "../Components/Carousel";
+import ServicesHero from "../Components/ServicesHero";
 import { ServicesSection } from "../Components/ServicesSection";
 
 export const Services = () => {
@@ -6,7 +6,8 @@ export const Services = () => {
         <div>
             {/* <Hero /> */}
             <div className="services container-fluid p-0">
-                <Carousel />
+                {/* <Carousel /> */}
+                <ServicesHero />
                 <ServicesSection />
             </div>
         </div>
