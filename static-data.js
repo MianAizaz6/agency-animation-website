@@ -1,4 +1,4 @@
-import { BrandedMarketing, ContentCreation, Ecommerce, LeadGeneration, Photographers, WebDesign } from "./static-img-urls";
+import { BrandedMarketing, Content, ContentCreation, Ecommerce, LeadGeneration, PPC, Photographers, SEO, WebDesign, googleAnalytics, socailMedia, videoMarketing } from "./static-img-urls";
 
 export const faqs = [
   {
@@ -38,136 +38,181 @@ export const faqs = [
 
 export const reviewsData = [
   [
-     {
-      name:"MARANELLO RESTAURANT & CAFE",
-      desc:"An Italian restaurant that serves unique western food mixed with Eastern touches."
-     },
-     {
-      name:"LUXURY PART AUTO SPAREPARTS",
-      desc:"One of the Unique distributors for Luxury Cars Brand auto spare parts such as Range Rover, Rolls Royce, Lamborghini, and Bentley."
-     }, 
+    {
+      name: "MARANELLO RESTAURANT & CAFE",
+      desc: "An Italian restaurant that serves unique western food mixed with Eastern touches."
+    },
+    {
+      name: "LUXURY PART AUTO SPAREPARTS",
+      desc: "One of the Unique distributors for Luxury Cars Brand auto spare parts such as Range Rover, Rolls Royce, Lamborghini, and Bentley."
+    },
   ],
   [
     {
-      name:"Core Building Materials",
-      desc:"One of the primary sources for building materials in the market supplying both commercial and residential requirments."
-     }, 
-     {
-      name:"Maranello Design & Technical Services",
-      desc:"A full scale Interior design company that provides unique solutions to all design requirments."
-     }, 
+      name: "Core Building Materials",
+      desc: "One of the primary sources for building materials in the market supplying both commercial and residential requirments."
+    },
+    {
+      name: "Maranello Design & Technical Services",
+      desc: "A full scale Interior design company that provides unique solutions to all design requirments."
+    },
   ],
   [
     {
-      name:"NADA CLEANING CONTRACTING",
-      desc:"One of the most veteran Cleaning companies with over 43 Years in UAE’s market covering both B2B & B2C markets."
-     },  
-     {
-      name:"BRANDS LAB BY ZIANI",
-      desc:"Is a designer retail distributor providing luxury clothes, shoes, and bags to the European market."
-     }, 
+      name: "NADA CLEANING CONTRACTING",
+      desc: "One of the most veteran Cleaning companies with over 43 Years in UAE’s market covering both B2B & B2C markets."
+    },
+    {
+      name: "BRANDS LAB BY ZIANI",
+      desc: "Is a designer retail distributor providing luxury clothes, shoes, and bags to the European market."
+    },
   ],
   [
     {
-      name:"TRUXTERS",
-      desc:"Is a Swedish based classified E commerce platform that specializes in trucks, tractors, and heavy units."
-     }, 
-     {
-      name:"IBTAMEA",
-      desc:"Is a soft skills certification body in the Middle East & Africa."
-     }, 
+      name: "TRUXTERS",
+      desc: "Is a Swedish based classified E commerce platform that specializes in trucks, tractors, and heavy units."
+    },
+    {
+      name: "IBTAMEA",
+      desc: "Is a soft skills certification body in the Middle East & Africa."
+    },
   ],
   [
     {
-      name:"MR DAHBIRHA",
-      desc:"Is a Jordanian - Palestinian restaurant serving the authentic taste of Jordanian & Palestinian cuisine."
-     },
-     {
-      name:"ELLIXI INTERIOR DESIGN",
-      desc:"An Interior & full design solution brand that provides top notch modern designs and implementations."
-     }
-  ] 
+      name: "MR DAHBIRHA",
+      desc: "Is a Jordanian - Palestinian restaurant serving the authentic taste of Jordanian & Palestinian cuisine."
+    },
+    {
+      name: "ELLIXI INTERIOR DESIGN",
+      desc: "An Interior & full design solution brand that provides top notch modern designs and implementations."
+    }
+  ]
 ]
 
 export const cardData = [
   [
-      {
-          logo: LeadGeneration,
-          title: "Lead Generation via Paid Ads",
-          subtitle:
-              "Boost your customer acquisition with targeted paid ad campaigns. Our expert team leverages data-driven strategies to ensure your ads reach the right audience, driving high-quality leads and maximizing your ROI.",
-      },
-      {
-          logo: ContentCreation,
-          title: "Organic Content Creation",
-          subtitle:
-              "Enhance your brand's online presence with engaging and authentic content. Our content creation team produces SEO-optimized blogs, social media posts, and multimedia content that resonates with your audience and improves organic search rankings.",
-      },
+    {
+      logo: LeadGeneration,
+      title: "Lead Generation via Paid Ads",
+      subtitle:
+        "Boost your customer acquisition with targeted paid ad campaigns. Our expert team leverages data-driven strategies to ensure your ads reach the right audience, driving high-quality leads and maximizing your ROI.",
+    },
+    {
+      logo: ContentCreation,
+      title: "Organic Content Creation",
+      subtitle:
+        "Enhance your brand's online presence with engaging and authentic content. Our content creation team produces SEO-optimized blogs, social media posts, and multimedia content that resonates with your audience and improves organic search rankings.",
+    },
   ],
   [
-      {
-          logo: BrandedMarketing,
-          title: "Branded Marketing Approaches",
-          subtitle:
-              "Strengthen your brand identity with our customized marketing strategies. We develop and implement cohesive branding campaigns that convey your unique value proposition and foster customer loyalty.",
-      },
-      {
-          logo: Photographers,
-          title: "Professional Photographers",
-          subtitle:
-              "Capture your brand's essence with high-quality visuals. Our professional photographers provide stunning images that elevate your brand's aesthetic and enhance your marketing materials, making a lasting impression on your audience.",
-      },
+    {
+      logo: BrandedMarketing,
+      title: "Branded Marketing Approaches",
+      subtitle:
+        "Strengthen your brand identity with our customized marketing strategies. We develop and implement cohesive branding campaigns that convey your unique value proposition and foster customer loyalty.",
+    },
+    {
+      logo: Photographers,
+      title: "Professional Photographers",
+      subtitle:
+        "Capture your brand's essence with high-quality visuals. Our professional photographers provide stunning images that elevate your brand's aesthetic and enhance your marketing materials, making a lasting impression on your audience.",
+    },
   ],
   [
-      {
-          logo: WebDesign,
-          title: "Premium Website Designs",
-          subtitle:
-              "Transform your online presence with a sleek, user-friendly website. Our web design experts create responsive and visually appealing websites that reflect your brand's identity and offer an optimal user experience to convert visitors into customers.",
-      },
-      {
-          logo: Ecommerce,
-          title: "E-commerce Setup & Solutions",
-          subtitle:
-              "Launch and optimize your online store with our comprehensive e-commerce solutions. We offer end-to-end services, including platform selection, setup, and integration, ensuring a seamless shopping experience that drives sales and customer satisfaction.",
-      },
+    {
+      logo: WebDesign,
+      title: "Premium Website Designs",
+      subtitle:
+        "Transform your online presence with a sleek, user-friendly website. Our web design experts create responsive and visually appealing websites that reflect your brand's identity and offer an optimal user experience to convert visitors into customers.",
+    },
+    {
+      logo: Ecommerce,
+      title: "E-commerce Setup & Solutions",
+      subtitle:
+        "Launch and optimize your online store with our comprehensive e-commerce solutions. We offer end-to-end services, including platform selection, setup, and integration, ensuring a seamless shopping experience that drives sales and customer satisfaction.",
+    },
+  ],
+];
+
+export const projectsData = [
+  [
+    {
+      logo: SEO,
+      title: "Detailed SEO Audit of a Website",
+      subtitle:
+        "SEO, or search engine optimization, is a big part of digital marketing. Blogs and websites are the biggest sources of organic traffic and marketing. SEO allows digital marketers to optimize the website to make it more appealing and inviting for potential or existing customers. ",
+    },
+    {
+      logo: videoMarketing,
+      title: "Video Marketing",
+      subtitle:
+        "Enhance your brand's online presence with engaging and authentic content. Our content creation team produces SEO-optimized blogs, social media posts, and multimedia content that resonates with your audience and improves organic search rankings.",
+    },
+  ],
+  [
+    {
+      logo: Content,
+      title: "Content Marketing ",
+      subtitle:
+        "Strengthen your brand identity with our customized marketing strategies. We develop and implement cohesive branding campaigns that convey your unique value proposition and foster customer loyalty.",
+    },
+    {
+      logo: PPC,
+      title: "PPC Marketing Strategies",
+      subtitle:
+        "Capture your brand's essence with high-quality visuals. Our professional photographers provide stunning images that elevate your brand's aesthetic and enhance your marketing materials, making a lasting impression on your audience.",
+    },
+  ],
+  [
+    {
+      logo: googleAnalytics,
+      title: "Google Analytics",
+      subtitle:
+        "Transform your online presence with a sleek, user-friendly website. Our web design experts create responsive and visually appealing websites that reflect your brand's identity and offer an optimal user experience to convert visitors into customers.",
+    },
+    {
+      logo: socailMedia,
+      title: "Social Media Ad Campaigns",
+      subtitle:
+        "Launch and optimize your online store with our comprehensive e-commerce solutions. We offer end-to-end services, including platform selection, setup, and integration, ensuring a seamless shopping experience that drives sales and customer satisfaction.",
+    },
   ],
 ];
 
 export const whyusdata = [
   {
-    heading:"Proven Results",
-    subheading:"Don’t wait—experience immediate improvements in your digital presence."
+    heading: "Proven Results",
+    subheading: "Don’t wait—experience immediate improvements in your digital presence."
   },
   {
-    heading:"Innovative Solutions",
-    subheading:"Be the first to benefit from our groundbreaking marketing techniques."
+    heading: "Innovative Solutions",
+    subheading: "Be the first to benefit from our groundbreaking marketing techniques."
   },
   {
-    heading:"Rapid Implementation",
-    subheading:"Start seeing results right away with our fast-tracked strategies."
+    heading: "Rapid Implementation",
+    subheading: "Start seeing results right away with our fast-tracked strategies."
   },
 ]
 
 export const numberData = [
   {
-    heading:"Completed Project",
-    number:127,
-    symbol:"+"
+    heading: "Completed Project",
+    number: 127,
+    symbol: "+"
   },
   {
-    heading:"Happy Customers",
-    number:112,
-    symbol:"+"
+    heading: "Happy Customers",
+    number: 112,
+    symbol: "+"
   },
   {
-    heading:"Years of Experience",
-    number:7,
-    symbol:"+"
+    heading: "Years of Experience",
+    number: 7,
+    symbol: "+"
   },
   {
-    heading:"Client Retention Rate",
-    number:88,
-    symbol:"%"
+    heading: "Client Retention Rate",
+    number: 88,
+    symbol: "%"
   },
 ]

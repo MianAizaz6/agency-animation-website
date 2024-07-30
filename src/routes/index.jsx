@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import Aboutus from "../Pages/Aboutus";
+import { Projects } from "../Pages/projects";
 
 const routes = createBrowserRouter([
     {
@@ -22,6 +23,10 @@ const routes = createBrowserRouter([
             {
                 path: "/services",
                 element: <Services />,
+            },
+            {
+                path: "/projects",
+                element: <Projects />,
             },
             {
                 path: "/about-us",

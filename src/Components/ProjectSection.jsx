@@ -3,32 +3,20 @@
 // import { ScrollTrigger } from "gsap/all";
 
 import { useGSAP } from "@gsap/react";
-import { cardData, whyusdata } from "../../static-data";
+import { projectsData, whyusdata } from "../../static-data";
 import { Star, whyUs } from "../../static-img-urls";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
 /* eslint-disable react/prop-types */
-const ServiceCard = ({ item }) => {
+const ProjectCard = ({ item }) => {
     const { title, subtitle, logo } = item
     return (
-        // <div className="row services-row">
-        //     <div className={`col-lg-6 order-${imageFirst ? 2 : 1}`}>
-        //         <div className="services-card">
-        //             <div className="title">{title}</div>
-        //             <div className="text">{content}</div>
-        //             <button>Get Service</button>
-        //         </div>
-        //     </div>
-        //     <div
-        //         className={`col-lg-6 d-flex justify-center order-${imageFirst ? 1 : 2
-        //             }`}
-        //     >
-        //         <img src={image} alt="" />
-        //     </div>
-        // </div>
-        <div className="bg-black card rounded-md flex flex-col gap-4 p-[20px] ">
-            <img className="w-[48px] h-[48px]" src={logo} alt="" />
+
+        <div className="bg-black card rounded-md flex flex-col justify-between gap-4 p-[20px] ">
+            <div className="h-[200px]">
+                <img className="rounded-[8px]" src={logo} alt="" />
+            </div>
             <div className="flex flex-col gap-1">
                 <h3 className="title">{title}</h3>
                 <p className="text-[#c8c8c8] text-[18px]">{subtitle}</p>
@@ -36,6 +24,7 @@ const ServiceCard = ({ item }) => {
         </div>
     );
 };
+
 
 const WhyUsCard = ({ item }) => {
     return (
@@ -53,15 +42,14 @@ const WhyUsCard = ({ item }) => {
 
 
 
-export const ServicesSection = () => {
-
+export const ProjectsSection = () => {
 
     useGSAP(() => {
         gsap.registerPlugin(ScrollTrigger);
         let cards = gsap.utils.toArray(".grid-container")
         // gsap.set('.grid-container');
 
-        cards.forEach( (card) => {
+        cards.forEach((card) => {
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: cards,
@@ -72,13 +60,13 @@ export const ServicesSection = () => {
                 }
             });
 
-            tl.fromTo(card, 
-                { y: "-50%", opacity: 0, scale: 1, force3D: true,  },
+            tl.fromTo(card,
+                { y: "-50%", opacity: 0, scale: 1, force3D: true, },
                 { y: "00%", opacity: 1, scale: 1, duration: 2000, ease: "power4.in", force3D: true }
             )
 
 
-        }) 
+        })
     }, {});
 
 
@@ -96,9 +84,9 @@ export const ServicesSection = () => {
                     </div>
                     <div className="grid grid-cols-3 gap-4 grid-container">
                         {
-                            cardData.map((arr) => {
+                            projectsData.map((arr) => {
                                 const items = arr.map(item => {
-                                    return <ServiceCard key={item.title} item={item} />
+                                    return <ProjectCard key={item.title} item={item} />
 
                                 })
 
@@ -116,12 +104,12 @@ export const ServicesSection = () => {
                         </div>
                         <div className="flex flex-col gap-4">
                             {
-                               whyusdata.map(item => <WhyUsCard key={item.heading} item={item} />)
-                            }  
+                                whyusdata.map(item => <WhyUsCard key={item.heading} item={item} />)
+                            }
                         </div>
                     </div>
                     <div>
-                        <img className="w-full h-[450px] object-cover svg-img" src={whyUs} alt=""  />
+                        <img className="w-full h-[450px] object-cover svg-img" src={whyUs} alt="" />
                     </div>
                 </div>
 
