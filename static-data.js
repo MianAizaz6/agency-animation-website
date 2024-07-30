@@ -148,3 +148,26 @@ export const whyusdata = [
     subheading:"Start seeing results right away with our fast-tracked strategies."
   },
 ]
+
+export const numberData = [
+  {
+    heading:"Completed Project",
+    number:127,
+    symbol:"+"
+  },
+  {
+    heading:"Happy Customers",
+    number:112,
+    symbol:"+"
+  },
+  {
+    heading:"Years of Experience",
+    number:7,
+    symbol:"+"
+  },
+  {
+    heading:"Client Retention Rate",
+    number:88,
+    symbol:"%"
+  },
+]

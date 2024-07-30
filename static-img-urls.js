@@ -17,3 +17,4 @@ export { default as refineStrategy } from './src/assets/svgs/refine-strategy.png
 export { default as Tick } from './src/assets/svgs/Tick.png'
 export { default as Star } from './src/assets/svgs/Star.png'
 export { default as whyUs } from './src/assets/svgs/why-us.png'
+export { default as aboutcover } from './src/assets/svgs/about-cover.png'

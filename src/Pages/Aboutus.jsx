@@ -1,10 +1,20 @@
+import AboutHero from "../Components/AboutHero";
+import AboutMain from "../Components/AboutMain";
+import FAQ from "../Components/FAQ";
+import Reviews from "../Components/Reviews";
+
+
 const Aboutus = () => {
     return (
-        <div className="container-fluid aboutus-section">
-            <div className="cover">
-                <div className="heading"></div>
-            </div>
+        <div>
+        <div className="services container-fluid p-0">
+            <AboutHero />
+            <AboutMain />
+            <Reviews />
+
+            <FAQ />
         </div>
+    </div>
     );
 };
 
