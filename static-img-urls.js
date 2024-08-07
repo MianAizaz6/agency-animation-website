@@ -25,3 +25,5 @@ export { default as videoMarketing } from './src/assets/svgs/image-and-video-ana
 export { default as PPC } from './src/assets/svgs/social-media-marketer-smm-6533a1dc4e42c-5.webp'
 export { default as socailMedia } from './src/assets/svgs/socila-media.webp'
 export { default as checkIcon } from './src/assets/svgs/check-icon.png'
+export { default as timesIcon } from './src/assets/svgs/times.svg'
+export { default as thankyou } from './src/assets/svgs/thank-you.png'

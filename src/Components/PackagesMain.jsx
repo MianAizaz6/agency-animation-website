@@ -1,13 +1,20 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { checkIcon, Star } from "../../static-img-urls"
 import { packagesData } from "../../static-data";
+import Modal from "./Modal";
+import ModalForm from "./ModalForm";
 
 
 /* eslint-disable react/prop-types */
 const PackageCard = ({ item, index }) => {
     const { name, features, serviceHighlights, description, plan, cta } = item
-
+    
+    const [openModal,setOpenModal] = useState(false);
     const cardRef = useRef(null);
+
+    const openModalFun = () => {
+        setOpenModal(true);
+    }
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
@@ -56,7 +63,7 @@ const PackageCard = ({ item, index }) => {
                         }
                     </div>
                 </div>
-                <button className=" w-fit  px-5 py-3 bg-black font-bold rounded-md  transition-all leading-[1.4rem]  ">
+                <button className=" w-fit  px-5 py-3 bg-black font-bold rounded-md  transition-all leading-[1.4rem] " onClick={() => openModalFun()}>
                     <p className="title !text-[1.2rem] !leading-[1.4rem] m-0">
                        {cta}
                     </p>
@@ -80,14 +87,18 @@ const PackageCard = ({ item, index }) => {
                     }
                 </div>
             </div>
+            {
+                openModal && <Modal open={openModal} size="max-w-[1000px] min-w-[800px]" toggle={setOpenModal} >
+                    <ModalForm name={name} />
+                </Modal>
+            }
         </div>
     );
 };
 
-
 const PackagesMain = () => {
     return (
-        <div className="services-content container-fluid">
+        <div className="services-content container-fluid overflow-hidden">
             <div className="container flex flex-col gap-5">
                 <div className="flex flex-col gap-5">
                     <div className="flex flex-col items-center gap-2">
