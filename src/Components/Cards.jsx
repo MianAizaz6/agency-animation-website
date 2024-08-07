@@ -20,7 +20,7 @@ const Card = ({ data }) => {
                         <p className="title !text-[1.2rem] !leading-[1.4rem] m-0">
                         Book a Meeting
                         </p>
-                        </button>                
+                    </button>                
                 </span>
                 {/* <img
                     src="https://www.cobratate.com/jointherealworld/images/crypto.jpg"

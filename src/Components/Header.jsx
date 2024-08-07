@@ -21,7 +21,11 @@ export const Header = () => {
                             <Link to={"/about-us"}>About Us</Link>
                         </li>
                     </ul>
-                    <button>Book a Meeting</button>
+                    <button>
+                        <Link to={'/packages'}>
+                            Our Packages
+                        </Link>
+                    </button>
                 </div>
             </div>
         </div>

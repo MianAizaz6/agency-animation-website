@@ -24,3 +24,4 @@ export { default as googleAnalytics } from './src/assets/svgs/search-engine-opti
 export { default as videoMarketing } from './src/assets/svgs/image-and-video-analysis-653375ce49431-1.webp'
 export { default as PPC } from './src/assets/svgs/social-media-marketer-smm-6533a1dc4e42c-5.webp'
 export { default as socailMedia } from './src/assets/svgs/socila-media.webp'
+export { default as checkIcon } from './src/assets/svgs/check-icon.png'

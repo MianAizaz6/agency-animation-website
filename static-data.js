@@ -211,3 +211,54 @@ export const numberData = [
     symbol: "%"
   },
 ]
+
+export const packagesData = [
+  {
+    name: 'Starter Instagram Package',
+    plan:"Basic",
+    features: ['Focused on Instagram growth.', 'Basic social media management.',' Perfect for small businesses and influencers.'],
+    serviceHighlights: ['6 Reels.', '8 Instagram Posts.'],
+    description: 'Boost your Instagram presence with high-quality content tailored to your brand. Includes comprehensive planning and trendy content formulas.',
+    cta: 'Get Started Now'
+  },
+  {
+    name: 'TikTok Growth Package',
+    plan:"Basic",
+    features: ['Dedicated to TikTok engagement and growth.', 'Strategic content planning.','Ideal for targeting Gen Z audience.'],
+    serviceHighlights: ['10 Tiktok Videos'],
+    description: 'Leverage TikTok’s algorithm to increase your reach and engagement. Includes creative scripting and trend optimization by TikTok specialists.',
+    cta: 'Boost Your TikTok'
+  },
+  {
+    name: 'Social Media Management Plus',
+    plan:"Pro",
+    features: ['Comprehensive management across multiple platforms.', 'Enhanced engagement strategies.','Perfect for growing brands.'],
+    serviceHighlights: ['8 Reels.', '10 Instagram Posts.'],
+    description: 'Increase engagement on Instagram with a well-rounded content mix. Includes detailed planning, compelling scripts, and trendy content.',
+    cta: 'Level Up Your Social Media'
+  },
+  {
+    name: 'Comprehensive Social Media Management',
+    plan:"Pro",
+    features: ['All-inclusive social media management', ' Customized content and strategies.','Ideal for established brands.'],
+    serviceHighlights: ['10 Instagram Reels.', '8 Instagram Posts.', '10 Tiktok Videos'],
+    description: 'A comprehensive package covering all major platforms to maximize your social media impact. Includes trend-based content and strategic planning.',
+    cta: 'Get Comprehensive Management'
+  },
+  {
+    name: 'Social Media Management Pro',
+    plan:"Elite",
+    features: ['Advanced management services.', 'Detailed analytics and reporting.','Suitable for businesses with larger audiences.'],
+    serviceHighlights: ['12 Instagram Reels.', '10 Instagram Posts.', '14 Tiktok Videos'],
+    description: 'Achieve dominance on Instagram and TikTok with high-quality content. Includes meticulous planning, scripting, and trend optimization.',
+    cta: 'Go Pro Today'
+  },
+  {
+    name: 'Ultimate Social Media Mastery',
+    plan:"Elite",
+    features: ['Top-tier management and growth strategies.', 'Maximum engagement and brand building.','Perfect for large enterprises and influencers.'],
+    serviceHighlights: ['14 Instagram Reels.', '12 Instagram Posts.', '20 Tiktok Videos'],
+    description: 'The ultimate package for brands aiming for extensive reach and engagement across all major platforms. Includes comprehensive planning, high-quality content creation, and trend',
+    cta: 'Master Your Social Media'
+  },
+];
