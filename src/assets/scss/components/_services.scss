@@ -35,18 +35,20 @@
             text-align: center;
             font-weight: bold;
             text-transform: uppercase;
-            background: -webkit-linear-gradient(#00FFFF, #40FFC0);
+            // background: -webkit-linear-gradient(#00FFFF, #40FFC0);
+            background: -webkit-linear-gradient(#38B6FF, #1882c0);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
 
         }
 
         .grid {
-            .card{
+            .card {
                 box-shadow: 2px 2px 2px 2px rgba(41, 255, 214, 0.3);
-                transition:  200ms ease-in;
-                &:hover{
-                    
+                transition: 200ms ease-in;
+
+                &:hover {
+
                     box-shadow: 2px 2px 2px 2px rgba(41, 255, 214, 1);
                     transition: all 200ms ease-in;
                     cursor: pointer;

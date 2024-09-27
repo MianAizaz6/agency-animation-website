@@ -23,7 +23,7 @@ const Reviews = () => {
                                     {
                                         innerArr.map((item, innerIndex) => (
                                             <div className="odd:self-start even:self-end p-[30px] w-[70%] h-[200px] bg-[rgba(255,255,255,0.20)] rounded-[16px] flex items-center gap-[15px]" key={innerIndex}>
-                                                <div className="bg-[#25253E] min-w-[50px] min-h-[50px] text-white flex justify-center items-center text-[28px] font-bold rounded-full">{item.name[0]}</div>
+                                                <div className="bg-[#25253E] min-w-[50px] min-h-[50px] text-[#38B6FF] flex justify-center items-center text-[28px] font-bold rounded-full">{item.name[0]}</div>
                                                 <div className="flex flex-col gap-[10px]">
                                                     <h1 className="main-heading !text-left !text-[24px] !m-0" >{item.name}</h1>
                                                     <p className="text-[16px]">{item.desc}</p>

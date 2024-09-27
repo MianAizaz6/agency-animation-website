@@ -13,7 +13,7 @@ function App() {
             <Hero />
             <TextSection />
             <Cards />
-            <StackingCard />
+            {/* <StackingCard /> */}
             <Reviews />
             <FAQ />
         </>

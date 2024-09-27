@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/svgs/white_logo.png";
+import logo from "../assets/svgs/go_logo.png";
 
 export const Header = () => {
     return (
         <div className="header container-fluid">
             <div className="container navbar-wrapper">
-                <img className="logo" src={logo} alt="logo" />
+                <div className="flex items-center gap-2">  <img className="logo" src={logo} alt="logo" /> <h1>GO ADVERTIZING</h1> </div>
                 <div className="menu">
                     <ul className="items">
                         <li className="item">
@@ -21,11 +21,7 @@ export const Header = () => {
                             <Link to={"/about-us"}>About Us</Link>
                         </li>
                     </ul>
-                    <button>
-                        <Link to={'/packages'}>
-                            Our Packages
-                        </Link>
-                    </button>
+                    <button>Contact us</button>
                 </div>
             </div>
         </div>

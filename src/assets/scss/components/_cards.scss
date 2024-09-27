@@ -23,7 +23,7 @@
                 text-align: center;
                 font-weight: bold; 
                 text-transform: uppercase;
-                background: -webkit-linear-gradient(#00FFFF, #40FFC0);
+                background: -webkit-linear-gradient(#38B6FF, #1882c0);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
 
@@ -103,7 +103,7 @@
 
         .simple-card-wrapper{
             position: relative;
-            background: linear-gradient(to right, #00FFFF, #40FFC0);
+            background: -webkit-linear-gradient(#38B6FF, #1882c0);
             padding: 3px;
             max-width: calc(85% - 3px);
             border-radius: 30px;
@@ -148,7 +148,7 @@
                 text-align: center;
                 font-weight: bold; 
                 text-transform: uppercase;
-                background: -webkit-linear-gradient(#00FFFF, #40FFC0);
+                background: -webkit-linear-gradient(#38B6FF, #1882c0);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }

@@ -23,15 +23,18 @@ const routes = createBrowserRouter([
             },
             {
                 path: "/services",
-                element: <Services />,
+                // element: <Services />,
+                element: <App />,
             },
             {
                 path: "/projects",
-                element: <Projects />,
+                // element: <Projects />,
+                element: <App />
             },
             {
                 path: "/about-us",
-                element: <Aboutus />,
+                // element: <Aboutus />,
+                element: <App />
             },
             {
                 path: "/packages",
