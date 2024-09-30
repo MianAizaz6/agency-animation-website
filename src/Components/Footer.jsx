@@ -1,5 +1,5 @@
 import { facebook, instagram, linkedin } from "../../static-img-urls";
-import logo from "../assets/svgs/white_logo.png";
+import logo from "../assets/svgs/go_logo.png";
 
 const Footer = () => {
     return (
@@ -16,7 +16,7 @@ const Footer = () => {
                     </div>
                     <div className="w-[40%]">
                         <img
-                            className="logo float-right"
+                            className="logo float-right" style={{height:'130px'}}
                             src={logo}
                             alt="logo"
                         />
